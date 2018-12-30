@@ -9,21 +9,21 @@ import Header from './common/header/Header';
 import CoursesPage from './components/course/CoursesPage';
 
 class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-      <div className="container-fluid">
-        <Header/>
-        {this.props.children}
-        <Switch>
-          <Route path="/" exact component={ Home } />
-          <Route path="/about" component={ About } />
-          <Route path="/courses" component={ CoursesPage } />
-        </Switch>
-      </div>
-      </BrowserRouter>
-    );
-  }
+	render() {
+		return (
+			<BrowserRouter>
+				<div className="container-fluid">
+					<Header/>
+					{this.props.children}
+					<Switch>
+						<Route path="/" exact component={ Home } />
+						<Route path="/about" component={ About } />
+						<Route path="/courses" component={ CoursesPage } />
+					</Switch>
+				</div>
+			</BrowserRouter>
+		);
+	}
 }
 
 export default App;
