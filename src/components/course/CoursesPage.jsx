@@ -16,6 +16,11 @@ export default class CoursesPage extends React.Component {
 		this.setState({course});
 	};
 
+	onClickSave = event => {
+		event.preventDefault();
+		alert(event.target.value);
+	}
+
 	render = () => {
 		return (
 			<div>
@@ -27,7 +32,7 @@ export default class CoursesPage extends React.Component {
 					value={this.state.course.title}/>
 				<input 
 					type="submit"
-					onChange={this.onClickSave}
+					onClick={this.onClickSave}
 					value="Save"/>
 			</div>);
 	};
